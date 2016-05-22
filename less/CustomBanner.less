@@ -1,0 +1,179 @@
+@showAllBtnLeft: 10px;
+@showAllBtnRight: 10px;
+@showAllBtnBottom: 10px;
+/* 点按钮 */
+.btn-type(point, @w:15px, @h: 15px, @c:#ccc) {
+    width: @w;
+    height: @h;
+    background: @c;
+    border-radius: @w;
+    &:hover {
+        background: #fff;
+        border: 1px solid @c;
+        box-sizing: border-box;
+    }
+    &.active {
+        background: #fff;
+        border: 1px solid @c;
+        box-sizing: border-box;
+    }
+}
+/* 数字按钮 */
+.btn-type(figure, @w:15px, @h: 15px, @c: #ccc, @bc:#818181, @bc1: #6495ED) {
+    width: @w;
+    height: @h;
+    line-height: @h;
+    background: @bc;
+    padding: 3px;
+    color: @c;
+    font-size: 14px;
+    text-align: center;
+    &:hover {
+        background: @bc1;
+    }
+    &.active {
+        background: @bc1;
+    }
+}
+/* 图片按钮 */
+.btn-type(image, @w:30px, @h: 30px, @bc:#ccc, @bc1:#fff) {
+    width: @w;
+    height: @h;
+    border: 1px solid @bc;
+    &:hover {
+        width: @w+5;
+        height: @h+5;
+        border: 1px solid @bc1;
+        box-sizing: border-box;
+    }
+    &.active {
+        width: @w+5;
+        height: @h+5;
+        border: 1px solid @bc1;
+        box-sizing: border-box;
+    }
+}
+/* 文本按钮 */
+.btn-type(text, @w:19%, @h: 30px, @c:#ccc) {
+    width: @w;
+    height: @h;
+    background: @c;
+    line-height: @h;
+    text-align: center;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    &:hover {
+        background: #fff;
+    }
+    &.active {
+        background: #fff;
+    }
+    //  span{
+    //      display: block;
+    //      height: @h;
+    //      line-height: @h;
+    //      text-align: center;
+    //      font-size: 12px;
+    //       
+    //  }
+}
+/* 轮播器图片外围div */
+.banner-warpper {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+/* 轮播器图片的ul */
+.banner-images {
+    width: 100%;
+    height: 100%;
+    //  overflow: hidden;
+}
+/* 轮播器图片的li */
+.banner-images li {
+    width: 100%;
+    height: 100%;
+}
+/* 轮播器图片 */
+.banner-images li a,
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* 水平播放 轮播器图片的li */
+.banner-images-h li {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* 垂直播放 轮播器图片的ul */
+.banner-images-v {
+    position: absolute;
+}
+/* 垂直播放 轮播器图片的li点击样式 */
+.banner-images-h li.active {
+    display: block;
+}
+/* 左右按钮统一样式 */
+.lrbtn {
+    width: 47px;
+    height: 80px; //  display: none;
+    position: absolute;
+    background-image: url("../img/bg_direction_nav.png");
+}
+/* 左按钮 */
+.left-btn {
+    left: 0;
+    background-position: 0 0;
+}
+.left-btn:hover {
+    background-position: 0 80px;
+}
+/* 右按钮  */
+.right-btn {
+    right: 0;
+    background-position: 47px 0;
+}
+.right-btn:hover {
+    background-position: 47px 80px;
+}
+/* 展示所有图片对应的小按钮  */
+.show-all-btn {
+    width: 97%;
+    position: absolute;
+    bottom: @showAllBtnBottom;
+    right: @showAllBtnRight;
+}
+/* 展示所有图片对应的小按钮li  */
+.show-all-btn li {
+    margin-right: 3px;
+    float: left;
+    cursor: pointer;
+}
+/* 展示所有图片对应的小按钮 最后一个li   */
+.show-all-btn li:last-child {
+    margin-right: 0;
+}
+/* 展示所有图片对应的小按钮 点按钮li   */
+.point-type li {
+    .btn-type(point);
+}
+/* 展示所有图片对应的小按钮 数字按钮li   */
+.figure-type li {
+    .btn-type(figure);
+}
+/* 展示所有图片对应的小按钮 图片按钮li   */
+.image-type li {
+    .btn-type(image);
+}
+/* 展示所有图片对应的小按钮 文本按钮li   */
+.text-type li {
+    .btn-type(text);
+}

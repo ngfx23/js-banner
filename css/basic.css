@@ -1,0 +1,23 @@
+.clearfix{
+	content: "";
+	display: inline-block;
+	clear: both;
+}
+.container>div{
+	margin: 30px;
+}
+.row-left{
+	float: left;
+	margin-right: 200px;
+}
+.row-left>div{
+	margin: 10px;
+}
+.row-right{
+	float: left;
+}
+.row-right>div{
+	margin: 10px;
+}
+
+

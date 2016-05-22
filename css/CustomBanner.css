@@ -1,0 +1,155 @@
+/* 点按钮 */
+/* 数字按钮 */
+/* 图片按钮 */
+/* 文本按钮 */
+/* 轮播器图片外围div */
+.banner-warpper {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+/* 轮播器图片的ul */
+.banner-images {
+  width: 100%;
+  height: 100%;
+}
+/* 轮播器图片的li */
+.banner-images li {
+  width: 100%;
+  height: 100%;
+}
+/* 轮播器图片 */
+.banner-images li a,
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* 水平播放 轮播器图片的li */
+.banner-images-h li {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* 垂直播放 轮播器图片的ul */
+.banner-images-v {
+  position: absolute;
+}
+/* 垂直播放 轮播器图片的li点击样式 */
+.banner-images-h li.active {
+  display: block;
+}
+/* 左右按钮统一样式 */
+.lrbtn {
+  width: 47px;
+  height: 80px;
+  position: absolute;
+  background-image: url("../img/bg_direction_nav.png");
+}
+/* 左按钮 */
+.left-btn {
+  left: 0;
+  background-position: 0 0;
+}
+.left-btn:hover {
+  background-position: 0 80px;
+}
+/* 右按钮  */
+.right-btn {
+  right: 0;
+  background-position: 47px 0;
+}
+.right-btn:hover {
+  background-position: 47px 80px;
+}
+/* 展示所有图片对应的小按钮  */
+.show-all-btn {
+  width: 97%;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+/* 展示所有图片对应的小按钮li  */
+.show-all-btn li {
+  margin-right: 3px;
+  float: left;
+  cursor: pointer;
+}
+/* 展示所有图片对应的小按钮 最后一个li   */
+.show-all-btn li:last-child {
+  margin-right: 0;
+}
+/* 展示所有图片对应的小按钮 点按钮li   */
+.point-type li {
+  width: 15px;
+  height: 15px;
+  background: #cccccc;
+  border-radius: 15px;
+}
+.point-type li:hover {
+  background: #fff;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+.point-type li.active {
+  background: #fff;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+/* 展示所有图片对应的小按钮 数字按钮li   */
+.figure-type li {
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  background: #818181;
+  padding: 3px;
+  color: #cccccc;
+  font-size: 14px;
+  text-align: center;
+}
+.figure-type li:hover {
+  background: #6495ed;
+}
+.figure-type li.active {
+  background: #6495ed;
+}
+/* 展示所有图片对应的小按钮 图片按钮li   */
+.image-type li {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cccccc;
+}
+.image-type li:hover {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+}
+.image-type li.active {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+}
+/* 展示所有图片对应的小按钮 文本按钮li   */
+.text-type li {
+  width: 19%;
+  height: 30px;
+  background: #cccccc;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.text-type li:hover {
+  background: #fff;
+}
+.text-type li.active {
+  background: #fff;
+}
